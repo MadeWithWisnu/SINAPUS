@@ -3,7 +3,11 @@
 
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
 
   <title>Maps, navigation and augmented reality | SINAPUS </title>
   <meta content="" name="description">
@@ -137,6 +141,35 @@
             Panduan keselamatan kerja di Fakultas Teknik Universitas Mataram mengacu pada sistem manajemen keselamatan, kesehatan kerja, dan perlindungan lingkungan di universitas 
             di bawah  koordinasi Pusat Keamanan Keselamatan Kesehatan Kerja dan Lingkungan (PK4L) yang berada di bawah dan bertanggungjawab langsung kepada Wakil Rektor bidang Sumber Daya Manusia dan Aset Universitas Mataram.
         </p>
+        <div class="row stats-row">
+          <div class="stats-col text-center col-md-3 col-sm-6">
+            <div class="circle">
+              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter stats-no"></span>
+              Satisfied Customers
+            </div>
+          </div>
+
+          <div class="stats-col text-center col-md-3 col-sm-6">
+            <div class="circle">
+              <span data-purecounter-start="0" data-purecounter-end="79" data-purecounter-duration="1" class="purecounter stats-no"></span>
+              Released Projects
+            </div>
+          </div>
+
+          <div class="stats-col text-center col-md-3 col-sm-6">
+            <div class="circle">
+              <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter stats-no"></span>
+              Hours Of Support
+            </div>
+          </div>
+
+          <div class="stats-col text-center col-md-3 col-sm-6">
+            <div class="circle">
+              <span data-purecounter-start="0" data-purecounter-end="68" data-purecounter-duration="1" class="purecounter stats-no"></span>
+              Hard Workers
+            </div>
+          </div>
+        </div>
         
         </div>
     </section><!-- End About Section -->
@@ -226,10 +259,47 @@
         <div>
           <iframe
                   id="map-viewer-iframe"
-                  style="width:100%; height:300px"
+                  style="width:100%; height:600px"
                   src="https://map-viewer.situm.com?email=diansusana72@gmail.com&apikey=da54de16a0fba78b1e749d632b641b611b836d248600b0d6127b5fec10449f58">
             </iframe>
         </div>
+
+        <div class="row">
+          <div class="feature-col col-lg-4 col-xs-12">
+            <div class="card card-block text-center">
+              <div>
+                <div class="feature-icon">
+                  <i class="bi bi-binoculars"></i>
+                </div>
+              </div>
+
+              <div>
+                <h3>
+                  Good Documentation
+                </h3>
+
+                <p>
+                  Eque feugiat contentiones ei has. Id summo mundi explicari his, nec in maiorum scriptorem.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <a-scene
+            embedded
+            loading-screen="enabled: false;"
+            arjs="sourceType: webcam; debugUIEnabled: false;">
+                <a-image
+                    src="assets/asset.png"
+                    look-at="[gps-camera]"
+                    scale="1 1 1"
+                    gps-entity-place="latitude: 8.60323; longitude: 116.1442;"
+                ></a-image>
+
+            <a-camera gps-camera rotation-reader></a-camera>
+        </a-scene>
+          </div>
       </div>
 
     </section><!-- End Features Section -->
